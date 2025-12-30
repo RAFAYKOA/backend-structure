@@ -12,9 +12,9 @@ const teacherRoutes = require('./routes/teachers');
 const studentRoutes = require('./routes/studentRoutes'); // ✅ UNCOMMENT THIS
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/your-db-name', {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 })
 .then(() => console.log('MongoDB connected successfully!'))
 .catch(err => console.error('MongoDB connection error:', err));
