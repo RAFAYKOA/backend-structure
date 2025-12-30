@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const app = express();
 const path = require('path');
 const cors = require('cors');
+import dotenv from "dotenv";
+dotenv.config();
 
 // Serve static files from the 'uploads' directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
